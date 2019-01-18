@@ -2,16 +2,13 @@
 #include "AFNDb.h"
 #include "AFNDc.h"
 #include "xor_xnor.h"
-#include "stdio.h"
 
-using namespace std;
 
 int main(){
 	char *palabra=(char*)calloc(400, sizeof(char));
 	int op, rep;
 
 	do{
-		system("/usr/bin/clear");
 		printf("Practica 4.- AUTOMATAS FINITOS NO DETERMINISTAS\n\n");
 		printf("*******MENU******\n");
 		printf("1.- Inciso A) ER: (0|1)*(00|11)(0|1)*\n");
