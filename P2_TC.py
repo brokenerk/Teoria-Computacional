@@ -1,14 +1,14 @@
 
 import sys
-import tkMessageBox
 import os
-import Tkinter
-from Tkinter import *
+import tkinter
+from tkinter import *
+from tkinter import messagebox
 import random
 
 #Inicializacion de la interfaz
 
-top = Tkinter.Tk ()
+top = Tk()
 
 top.title ("Practica 2: Operaciones en lenguajes")
 top.geometry ("780x550")
@@ -23,8 +23,8 @@ def read(var1):
 	a = E1.get().replace(',','')
 	c = list(E1.get().split(","))
 	
-	print "Alfabeto: "+str(c)
-	print "Longitud: "+str(len(c)) 
+	print("Alfabeto: "+str(c))
+	print("Longitud: "+str(len(c)))
 	
 def read2(var1):
 	global a,b,c
@@ -38,8 +38,8 @@ def read2(var1):
 	for x in range (0, len(c)):
 		a = a + c[x]
 	
-	print "Alfabeto: "+str(c)
-	print "Longitud: "+str(len(c)) 
+	print("Alfabeto: "+str(c))
+	print("Longitud: "+str(len(c))) 
 	
 def callback():
 	read(E1)
@@ -49,8 +49,8 @@ def callback2():
 
 def Lenguajes():
 	os.system('clear')
-	print "Alfabeto: "+str(c)
-	print "Longitud: "+str(len(c)) 
+	print("Alfabeto: "+str(c))
+	print("Longitud: "+str(len(c))) 
 	print ("")
 	print ("")
 	print("Lenguajes:")
@@ -91,8 +91,8 @@ def Lenguajes():
 			lenguaje2.append(s2)
 			lenguaje2=list(set(lenguaje2))
 		
-		print "L1 = "+str(lenguaje1);
-		print "L2 = "+str(lenguaje2)
+		print("L1 = "+str(lenguaje1))
+		print("L2 = "+str(lenguaje2))
 
 
 def Union():
@@ -113,8 +113,8 @@ def Union():
 		if(esta == False):
 			uni.append(lenguaje1[x])
 
-	print "Union L1U12 = "+str(uni)
-	print "Longitud: "+str(len(uni))
+	print("Union L1U12 = "+str(uni))
+	print("Longitud: "+str(len(uni)))
 
 def Concatenar():
 	print ("")
@@ -125,9 +125,9 @@ def Concatenar():
 		for y in range(0, len(lenguaje2)):
 			Concatenacion.append(lenguaje1[x] + lenguaje2[y])
 
-	print "Concatenacion L1L2: "
-	print str(Concatenacion)
-	print "Longitud: "+str(len(Concatenacion))
+	print("Concatenacion L1L2: ")
+	print(str(Concatenacion))
+	print("Longitud: "+str(len(Concatenacion)))
 
 def Diferencias():
 	print ("")
@@ -154,8 +154,8 @@ def Diferencias():
 		if(flag2 == False):
 			LD2.append(lenguaje2[k])
 
-	print "Diferencia L1-L2 = "+str(LD1)
-	print "Diferencia L2-L1 = "+str(LD2)
+	print("Diferencia L1-L2 = "+str(LD1))
+	print("Diferencia L2-L1 = "+str(LD2))
 
 def Potencia():
 	global lista1, exp, listafinal
@@ -181,8 +181,8 @@ def Potencia():
 					lista1.append(lista1[x] + lenguaje1[y])
 		for x in range ((len (lista1)) - (len(lenguaje1) ** exp),len(lista1)):
 			listafinal.append(lista1[x])
-		print str(listafinal) 
-		print len(listafinal)
+		print(str(listafinal))
+		print(len(listafinal))
 	else:
 		if (exp < 0):
 			for x in range(0,len(lenguaje2)):
@@ -199,8 +199,8 @@ def Potencia():
 					lista1.append(lista1[x] + lenguaje2[y])
 		for x in range ((len (lista1)) - (len(lenguaje2) ** exp),len(lista1)):
 			listafinal.append(lista1[x])
-		print str(listafinal)
-		print len(listafinal)
+		print(str(listafinal))
+		print(len(listafinal))
 
 def Curp():
 	global Apellidos,Nombres,Estados
@@ -279,11 +279,11 @@ def Curp():
 	#CURP
 	Clave = Ap[0] + Ap[1].upper() + Am[0] + Nombre[0] + str(Edad) + str(Mes) + str(Dia) + Sexo + Estados[Entidad] + ApAux[1].upper() + AmAux[1].upper() + NombreAux[1].upper() + str(penult_car) + str(ult_car)
 	os.system('clear')
-	print Ap + " " + Am + " " + Nombre
-	print "Edad: " + str(EdadAux) + " anhos"
-	print "Dia: " + str(Dia)+ "   " +" Mes: " + str(Mes) + "-" + Meses[MesAux] + "   " + "Anho:" + str(Edad)
-	print "Entidad: " + Entidad  
-	print "\n" + "CURP: " + Clave + "\n\n"
+	print(Ap + " " + Am + " " + Nombre)
+	print("Edad: " + str(EdadAux) + " anhos")
+	print("Dia: " + str(Dia)+ "   " +" Mes: " + str(Mes) + "-" + Meses[MesAux] + "   " + "Anho:" + str(Edad))
+	print("Entidad: " + Entidad  )
+	print("\n" + "CURP: " + Clave + "\n\n")
 	
 def Clear():
 	os.system('clear')
